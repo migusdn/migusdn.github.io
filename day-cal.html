@@ -26,13 +26,10 @@
                 targetDate.setDate(targetDate.getDate() + numValue);
                 console.log('계산된 targetDate (date):', targetDate.toISOString());
                 return targetDate;
-            } else if (type === "time") {
-                const targetDate = new Date(now.getTime() + numValue * 24 * 60 * 1000);
-                 
-                console.log('계산된 targetDate (time):', targetDate.toISOString());
+            } else if (type === "time") { 
+                const targetDate = new Date(now.getTime() + numValue * 60 * 60 * 1000);
                 return targetDate;
             } else {
-                console.warn('알 수 없는 type:', type);
                 return now;
             }
         }
