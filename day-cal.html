@@ -23,7 +23,7 @@
 
             if (type === "date") {
                 const targetDate = new Date(now);
-                targetDate.setDate(targetDate.getDate() + numValue);
+                targetDate.setDate(targetDate.getDate() + numValue - 1);
                 console.log('계산된 targetDate (date):', targetDate.toISOString());
                 return targetDate;
             } else if (type === "time") { 
